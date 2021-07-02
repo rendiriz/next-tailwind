@@ -1,18 +1,14 @@
 // #region Global Imports
-import React, { ComponentType } from "react";
-import { NextComponentType } from "next";
+import React from "react";
 // #endregion Global Imports
 
-type PageWithLayoutType = NextComponentType & { Layout: ComponentType };
-
-type AppLayoutProps = {
-  Component: PageWithLayoutType;
-  pageProps: any;
-};
+// #region Local Imports
+import { AppWithLayout } from "@Interfaces";
+// #endregion Local Imports
 
 const Noop = ({ children }: any) => children;
 
-const MyApp = ({ Component, pageProps }: AppLayoutProps) => {
+const MyApp = ({ Component, pageProps }: AppWithLayout) => {
   const Layout = Component.Layout || Noop;
 
   return (

@@ -1,21 +1,18 @@
 // #region Global Imports
-import React, { FC, ComponentType } from "react";
+import React, { ComponentType } from "react";
+import { NextPage } from "next";
 // #endregion Global Imports
 
 // #region Local Imports
-import { Home as LayoutHome } from '@Components/Layout'
+import { Home as LayoutHome } from "@Components/Layout";
 // #endregion Local Imports
 
-type HomeComponent = FC & { Layout: ComponentType }
+type HomePage = NextPage & { Layout: ComponentType };
 
-const Home: HomeComponent = () => {
-  return (
-    <div>
-      Home
-    </div>
-  )
-}
+const Home: HomePage = () => {
+  return <div>Home</div>;
+};
 
-Home.Layout = LayoutHome
+Home.Layout = LayoutHome;
 
-export default Home
+export default Home;
