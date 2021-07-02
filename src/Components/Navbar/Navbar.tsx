@@ -1,7 +1,7 @@
-import * as React from "react";
-import Link from "next/link";
+import * as React from 'react'
+import Link from 'next/link'
 
-import { INavbar } from "./dts/Navbar";
+import { INavbar } from './dts/Navbar'
 
 const Navbar: React.FunctionComponent<INavbar.IProps> = (): JSX.Element => {
   return (
@@ -17,7 +17,7 @@ const Navbar: React.FunctionComponent<INavbar.IProps> = (): JSX.Element => {
         </Link>
       </li>
     </ul>
-  );
-};
+  )
+}
 
-export { Navbar };
+export { Navbar }

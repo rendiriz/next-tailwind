@@ -1,18 +1,18 @@
 // #region Global Imports
-import React, { ComponentType } from "react";
-import { NextPage } from "next";
+import React, { ComponentType } from 'react'
+import { NextPage } from 'next'
 // #endregion Global Imports
 
 // #region Local Imports
-import { Basic as LayoutBasic } from "@Components/Layout";
+import { Basic as LayoutBasic } from '@Components/Layout'
 // #endregion Local Imports
 
-type FoundationsPage = NextPage & { Layout: ComponentType };
+type FoundationsPage = NextPage & { Layout: ComponentType }
 
 const Foundations: FoundationsPage = () => {
-  return <div>Foundations</div>;
-};
+  return <div>Foundations</div>
+}
 
-Foundations.Layout = LayoutBasic;
+Foundations.Layout = LayoutBasic
 
-export default Foundations;
+export default Foundations

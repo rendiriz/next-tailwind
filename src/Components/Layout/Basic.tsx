@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from 'react'
 
-import { IBasic } from "./dts/Basic";
+import { IBasic } from './dts/Basic'
 
-import { Navbar } from "@Components/Navbar";
+import { Navbar } from '@Components/Navbar'
 
 const Basic: React.FunctionComponent<IBasic.IProps> = ({
   children,
@@ -12,7 +12,7 @@ const Basic: React.FunctionComponent<IBasic.IProps> = ({
       <Navbar />
       {children}
     </main>
-  );
-};
+  )
+}
 
-export { Basic };
+export { Basic }

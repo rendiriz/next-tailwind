@@ -1,18 +1,30 @@
 // #region Global Imports
-import React, { ComponentType } from "react";
-import { NextPage } from "next";
+import React, { ComponentType } from 'react'
+import { NextPage } from 'next'
+import tw from 'twin.macro'
 // #endregion Global Imports
 
 // #region Local Imports
-import { Home as LayoutHome } from "@Components/Layout";
+import { Home as LayoutHome } from '@Components/Layout'
 // #endregion Local Imports
 
-type HomePage = NextPage & { Layout: ComponentType };
+type HomePage = NextPage & { Layout: ComponentType }
+
+const styles = {
+  container: ({ hasBackground }: any) => [
+    tw`flex flex-col items-center justify-center h-screen`,
+    hasBackground && tw`bg-gray-400`,
+  ],
+}
 
 const Home: HomePage = () => {
-  return <div>Home</div>;
-};
+  return (
+    <div css={styles.container({ hasBackground: true })}>
+      <div>Home</div>
+    </div>
+  )
+}
 
-Home.Layout = LayoutHome;
+Home.Layout = LayoutHome
 
-export default Home;
+export default Home

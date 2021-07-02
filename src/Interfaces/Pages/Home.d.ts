@@ -1,6 +1,6 @@
 // #region Global Imports
 // import { WithTranslation } from "next-i18next";
-import { ComponentType } from "react";
+import { ComponentType } from 'react'
 // #endregion Global Imports
 
 declare namespace IHomePage {
@@ -22,4 +22,4 @@ declare namespace IHomePage {
   // }
 }
 
-export { IHomePage };
+export { IHomePage }
