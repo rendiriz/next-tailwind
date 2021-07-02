@@ -8,16 +8,16 @@ import tw from 'twin.macro'
 import { Basic as LayoutBasic } from '@Components/Layout'
 // #endregion Local Imports
 
-type FoundationsPage = NextPage & { Layout: ComponentType }
+type ComponentsPage = NextPage & { Layout: ComponentType }
 
-const Foundations: FoundationsPage = () => {
+const Components: ComponentsPage = () => {
   return (
     <div css={[tw`container mx-auto`]}>
-      <div>Foundations</div>
+      <div>Components</div>
     </div>
   )
 }
 
-Foundations.Layout = LayoutBasic
+Components.Layout = LayoutBasic
 
-export default Foundations
+export default Components
