@@ -2,6 +2,7 @@
 import React, { ComponentType } from 'react'
 import { NextPage } from 'next'
 import tw from 'twin.macro'
+import { NextSeo } from 'next-seo'
 // #endregion Global Imports
 
 // #region Local Imports
@@ -11,19 +12,17 @@ import { Button } from '@Components/Button'
 
 type HomePage = NextPage & { Layout: ComponentType }
 
-const styles = {
-  container: ({ hasBackground }: any) => [
-    tw`flex flex-col items-center justify-center`,
-    hasBackground && tw`bg-gray-400`,
-  ],
-}
+const Container = tw.div`container mx-auto px-3`
 
 const Home: HomePage = () => {
   return (
-    <div css={styles.container({ hasBackground: true })}>
-      <div>Home</div>
-      <Button />
-    </div>
+    <>
+      <NextSeo title="Home" description="Description Home." />
+      <Container>
+        <div>Home</div>
+        <Button />
+      </Container>
+    </>
   )
 }
 
