@@ -1,8 +1,10 @@
 // #region Global Imports
 import GlobalStyles from './../styles/GlobalStyles'
 import React from 'react'
+import App, { AppProps } from 'next/app'
 import { cache } from '@emotion/css'
 import { CacheProvider } from '@emotion/react'
+import { I18nProvider } from 'next-rosetta'
 // #endregion Global Imports
 
 // #region Local Imports
@@ -17,9 +19,11 @@ const MyApp = ({ Component, pageProps }: AppWithLayout) => {
   return (
     <CacheProvider value={cache}>
       <GlobalStyles />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <I18nProvider table={pageProps.table}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </I18nProvider>
     </CacheProvider>
   )
 }
